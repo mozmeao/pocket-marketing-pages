@@ -3,6 +3,14 @@
   command = "eleventy"
   functions = "./functions"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Cache-Control = "max-age=600, public"
+
 # Redirect old style locale URLs to new ones
 [[redirects]]
   from = "/de-DE/*"
