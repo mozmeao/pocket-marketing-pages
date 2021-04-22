@@ -404,65 +404,8 @@
     <script src="/marketing-assets/web/main.ba9806c7bc46056e1919.js"></script>
 
     <script src="/marketing-assets/j/v4/global.min.js"></script>
-    <script>
-      (function () {
-        // script is provided by Snowplow, published by web-discover CI deploy step.
-        (function (p, l, o, w, i, n, g) {
-          if (!p[i]) {
-            p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
-            p.GlobalSnowplowNamespace.push(i);
-            p[i] = function () {
-              (p[i].q = p[i].q || []).push(arguments);
-            };
-            p[i].q = p[i].q || [];
-            n = l.createElement(o);
-            g = l.getElementsByTagName(o)[0];
-            n.async = 1;
-            n.src = w;
-            g.parentNode.insertBefore(n, g);
-          }
-        })(
-          window,
-          document,
-          "script",
-          "https://assets.getpocket.com/web-utilities/public/static/sp.js",
-          "snowplow"
-        );
-
-        const connectorUrl = "d.getpocket.com";
-
-        snowplow("newTracker", "sp", connectorUrl, {
-          appId:
-            window.__STATE__.env === "prod" ? "pocket-web" : "pocket-web-dev",
-          platform: "web",
-          eventMethod: "beacon",
-          respectDoNotTrack: true,
-          contexts: {
-            webPage: true,
-            performanceTiming: true,
-          },
-        });
-
-        snowplow("addGlobalContexts", [
-          {
-            schema: `iglu:com.pocket/user/jsonschema/1-0-0`,
-            data: {
-              hashed_guid:
-                "85fp4T52A0472B56a9gF962Uu6d1A48f2cFAg4weDPXePUp630V83If6b65Ak0Vp",
-            },
-          },
-        ]);
-
-        snowplow(
-          "enableActivityTracking",
-          10, // heartbeat delay
-          10 // heartbeat interval
-        );
-        snowplow("enableLinkClickTracking");
-        snowplow("enableFormTracking");
-        snowplow("trackPageView");
-      })();
-    </script>
+    <script src="/marketing-assets/js/mozilla-cookie-helper.js"></script>
+    <script src="/marketing-assets/js/snowplow.js"></script>
 
     <script
       src="/marketing-assets/web/newtab.f67ccc78a76408d1dc20.js"
