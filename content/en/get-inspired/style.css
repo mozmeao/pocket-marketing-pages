@@ -1,0 +1,41 @@
+.h12jtata .emphasized {
+  padding-left: 2.4rem !important;
+  padding-right: 2.4rem;
+}
+
+.i-mobile-wrap {
+  display: flex;
+}
+
+.i-mobile {
+  margin-top: 20px;
+}
+
+.i-mobile img {
+  max-height: 40px;
+}
+
+.i-mobile--android {
+  margin-left: 10px;
+}
+
+
+@media only screen and (max-width: 960px) {
+
+  .i-mobile-wrap {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .i-mobile img {
+    max-height: 60px;
+  }
+  .i-mobile--android {
+    margin-left: 0;
+  }
+
+  .i-primary-cta {
+    display: none !important;
+  }
+
+}
