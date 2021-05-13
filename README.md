@@ -22,6 +22,14 @@ Due to the current Netlify's status we decided to implement our own locale redir
 
 To use the locale redirect function one should add `/redirect/` before the requested path. For example `/about/` becomes `/redirect/about/`.
 
+## Local installation
+
+To run the site locally via Eleventy's built in web server:
+
+```
+npm install
+npm run serve
+```
 
 ## Links
  - Staging: https://pocket-static-staging.netlify.app/
